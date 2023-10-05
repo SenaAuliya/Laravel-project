@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,10 @@ Route::get('/info', function () {
     echo 'info';
 });
 
-Route::get('/register', [UserController::class, 'index']);
+Route::get('/register', function (){
+    return view('Register');
+});
+
 
 Route::get('/show', [UserController::class, 'show']);  
 Route::get('/create', [UserController::class, 'create']);  
