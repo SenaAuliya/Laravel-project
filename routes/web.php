@@ -22,9 +22,7 @@ Route::get('/info', function () {
     echo 'info';
 });
 
-Route::get('/register', function () {
-    echo 'register';
-});
+Route::get('/register', [UserController::class, 'index']);
 
 Route::get('/show', [UserController::class, 'show']);  
 Route::get('/create', [UserController::class, 'create']);  
